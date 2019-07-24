@@ -1,0 +1,110 @@
+/* @media all and (min-width: 480px) {
+  .Signup {
+    padding: 60px 0;
+  }
+
+  .Signup form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+.Signup form span.help-block {
+  font-size: 14px;
+  padding-bottom: 10px;
+  color: #999;
+} */
+
+@media all and (min-width: 480px) {
+  .signup-container {
+    margin: auto;
+    /* max-width: 320px; */
+    width: 30%;
+    padding: 2%;
+  }
+}
+
+.signup-page-container {
+  padding: 5% 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F8F9F9;
+}
+
+.signup-header {
+  margin: auto; 
+  text-align: center;
+}
+
+.signup-header h3 {
+  letter-spacing: 2px;
+}
+
+.signup-container {
+  width: 30%;
+  border: 1px solid lightgrey;
+  background-color: white;  
+  box-shadow: 2px 2px 5px grey;
+}
+
+.signup-form-container {
+  /* border: 1px solid rgb(8, 8, 8); */
+  font-weight: bold;
+  font-family: "Avenir-Book"; 
+  padding: 4% 2% 2% 2%;
+}
+
+.signup-form-container input {
+  /* background-color: blue; */
+  width: 100%;
+  height: 5vh;
+  padding: 0 0 0 2%;
+  margin: 0 0 5% 0;
+}
+
+.signup-form-container input:focus {
+  outline: none;
+  border: 1px solid #4A8BD8;
+}
+
+.signup-form-container label, .signup-form-container button {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.signup-form-container label {
+  display: block;
+  margin: 2% 0 2% 0;
+}
+
+.signup-form-container button {
+  padding: 2%;
+  font-weight: bold;
+  background-color: transparent;
+  margin: 5% 0 2% 0;
+  /* border: none; */
+  /* border: 1px solid #73C6B6; */
+  width: 100%;
+  background-color: #4A8BD8;
+  color: white;
+  /* text-shadow: 1px 1px 0.5px white; */
+}
+
+/* .login-form-container:hover button {
+  animation: border-fadein 2s forwards;
+} */
+
+.signup-button-container {
+  margin: auto;
+  text-align: center;
+}
+
+@keyframes border-fadein {
+  from {
+    border-bottom: 3px solid white;
+  }
+  to {
+    /* border-bottom: 3px solid rgba (233, 190, 250, 1) */
+    border-bottom: 3px solid #73C6B6;
+  }
+}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Thasadith|Lobster|Cinzel|Comfortaa|Cormorant+Upright|Megrim|Monoton|Notable|Orbitron|Poiret+One|Quicksand|Tangerine');
 
 * {
   margin: 0 0;
@@ -9,9 +10,9 @@
 
 /* *, *:before, *:after {
   box-sizing: inherit;
-}
+} */
 
-a:link, a:visited {
+/* a:link, a:visited {
   text-decoration: none;
   color: white;
 }

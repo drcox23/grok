@@ -1,0 +1,112 @@
+.wallet-nav {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: flex-start;
+    padding: 1% 0 2.5% 0;
+    width: 100%;
+    height: 7vh;
+}
+
+.nav-button {
+    margin-left: 2%;
+    padding: 0 0.5% 2.2% 0.5%;
+    font-size: 16px;
+} 
+
+ .display-container {
+    width: 80%;
+    margin: auto;
+}
+
+.card-container {
+    display: flex; 
+    flex-direction: column;
+}
+
+.card {
+    position: relative;
+    top: 15vh;
+    transform-style: preserve-3d;
+    height: 30vh;
+    width: 25vw;
+    margin: auto;
+    animation: flip-back 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards; 
+}
+
+div.card-flip {
+    position: relative;
+    transform-style: preserve-3d;
+    top: 15vh;
+    height: 30vh;
+    width: 25vw;
+    margin: auto;
+    animation: flip 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards;
+}
+
+/* .card:active  {
+    animation: flip 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+} */
+
+.card-info, .card-front {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.card-front {
+    z-index: 1;
+}
+
+.card-info {
+    z-index: 2;
+}
+
+.button-container {
+    width: 25%;
+    position: relative;
+    top: -5vh;
+    left: 75%;
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.edit-button button, .delete-button button {
+    border: transparent;
+    margin-left: 2vw;
+}
+
+.edit-button img, .delete-button img {
+    height: 3vh;
+    width: 3w;
+}
+
+
+@keyframes border-fadein {
+    from {
+      border-bottom: 3px solid white;
+    }
+    to {
+      border-bottom: 3px solid #73C6B6;
+    }
+  }
+
+  @keyframes flip {
+      0% {
+          transform: rotateX(0);
+      }
+      100% {
+          transform: rotateX(180deg);
+      }
+  }
+
+  @keyframes flip-back {
+      100% {
+          transform: rotateX(0);
+      }
+      0% {
+          transform: rotateX(180deg);
+      }
+  }

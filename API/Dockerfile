@@ -18,7 +18,9 @@ COPY . .
 RUN go get github.com/gin-gonic/gin
 RUN go get github.com/joho/godotenv
 RUN go get gopkg.in/mgo.v2
-RUN go get github.com/pilu/fresh
+RUN go get github.com/gin-contrib/cors
+# RUN go get github.com/pilu/fresh
+RUN go build -o main
 
 
 # if dev setting will use pilu/fresh for code reloading via docker-compose volume sharing with local machine
@@ -31,6 +33,6 @@ RUN go get github.com/pilu/fresh
 # 	fresh; \
 # 	fi
 
-CMD ["fresh"]
+CMD ["./main"]
 	
 # EXPOSE 8000

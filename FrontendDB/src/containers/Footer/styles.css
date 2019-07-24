@@ -1,0 +1,24 @@
+.footer {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  width: 100vw;
+  height: 10wh;
+  padding: 1%;
+  bottom: 0%;
+  position: fixed;
+}
+
+/* .footer p {
+  display: inline-block;
+  margin: 15px;
+  color: white;
+} */
+
+/* .right {
+  float: right;
+} */

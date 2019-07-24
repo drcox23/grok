@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.0",
+    "aws-amplify": "^1.1.11",
+    "axios": "^0.18.0",
     "gitmoji-cli": "^1.9.2",
-    "node-sass": "^4.12.0",
+    "mongodb": "^3.1.10",
+    "node-sass": "^4.10.0",
     "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",
+    "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
@@ -18,7 +22,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ampStart": "npm run-script start",
+    "create": "node ./mongo/createCollection.js",
+    "insert": "node ./mongo/insertMany.js",
+    "drop": "node ./mongo/dropCollection.js"
   },
   "eslintConfig": {
     "extends": "react-app"

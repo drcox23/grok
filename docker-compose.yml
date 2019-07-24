@@ -3,8 +3,8 @@ services:
   mongo:
     container_name: mongo
     image: mongo:latest
-    # volumes: 
-    #   - mongo-data-volume:/var/lib/mongodb/data
+    volumes: 
+      - mongo-data-volume:/var/lib/mongodb/data
     ports:
       - "${MONGO_HOST_PORT}:${MONGO_CONTAINER_PORT}"
       # - '27017:27017'
@@ -18,7 +18,7 @@ services:
       args:
         NODE_ENV: development
     image: golang:1.6.1-alpine
-    command: ["fresh"]
+    command: ["./main"]
     volumes:
       - ".:/go/src/grok"
     env_file: ./API/.env
@@ -28,26 +28,26 @@ services:
     networks:
       - my-app-network
 
-  react:
-    build:
-      context: ./FrontendDB
-      dockerfile: Dockerfile
-      args:
-        NODE_ENV: development
-    command: ["npm", "run", "start"]
-    volumes:
-      - ".:/app/:rw"
-    env_file: ./FrontendDB/.env
-    environment:
-      NODE_ENV: development
-    ports:
-      - "${REACT_HOST_PORT}:${REACT_CONTAINER_PORT}"
-      # - "3000:3000"
-    networks:
-      - my-app-network
+  # react:
+  #   build:
+  #     context: ./FrontendDB
+  #     dockerfile: Dockerfile
+  #     args:
+  #       NODE_ENV: development
+  #   command: ["npm", "run", "start"]
+  #   volumes:
+  #     - ".:/app/:rw"
+  #   env_file: ./FrontendDB/.env
+  #   environment:
+  #     NODE_ENV: development
+  #   ports:
+  #     - "${REACT_HOST_PORT}:${REACT_CONTAINER_PORT}"
+  #     # - "3000:3000"
+  #   networks:
+  #     - my-app-network
 
-# volumes: 
-#   mongo-data-volume:
+volumes: 
+  mongo-data-volume:
 #   redis-data-volume:
 networks:
   my-app-network:

@@ -4,10 +4,10 @@ import "gopkg.in/mgo.v2/bson"
 
 type card struct {
 	Id         bson.ObjectId `json:"_id" bson:"_id"`
-	User_id    int           `json:"user_id" bson:"user_id"`
+	User_id    string        `json:"user_id" bson:"user_id"`
 	Data       data          `json:"data" bson:"data"`
-	Css        style         `json:"css" bson:"css"`
-	Users      []int         `json:"users" bson:"users"`
+	Style      style         `json:"style" bson:"style"`
+	Users      []string      `json:"users" bson:"users"`
 	Is_deleted bool          `json:"is_deleted" bson:"is_deleted"`
 }
 
@@ -21,17 +21,23 @@ type data struct {
 }
 
 type style struct {
-	Front string `json:"front" bson:"front"`
-	Title string `json:"title" bson:"title"`
-	Back  string `json:"back" bson:"back"`
-	Info  string `json:"info" bson:"info"`
+	Template string `json:"template" bson:"template"`
+	Css      css    `json:"css" bson:"css"`
+}
+
+type css struct {
+	Back    string `json:"back" bson:"back"`
+	Company string `json:"company" bson:"company"`
+	Front   string `json:"front" bson:"front"`
+	Name    string `json:"name" bson:"name"`
+	Info    string `json:"info" bson:"info"`
 }
 
 type newCard struct {
-	User_id    int
+	User_id    string
 	Data       newData
-	Css        newStyle
-	Users      []int
+	Style        newStyle
+	Users      []string
 	Is_deleted bool
 }
 
@@ -45,8 +51,14 @@ type newData struct {
 }
 
 type newStyle struct {
-	Front string
-	Title string
-	Back  string
-	Info  string
+	Template string
+	Css      newCss
+}
+
+type newCss struct {
+	Back    string
+	Company string
+	Front   string
+	Name    string
+	Info    string
 }
